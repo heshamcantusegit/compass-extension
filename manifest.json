@@ -1,0 +1,28 @@
+{
+  "name": "Compass Queue",
+  "version": "1.0",
+  "description": "Shows when there are open requests in queue.",
+  "permissions": ["tabs", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://web.compass.lighthouselabs.ca/queue"],
+      "js": ["pollForQueueChanges.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "images/compass-black-16.png",
+      "24": "images/compass-black-24.png",
+      "64": "images/compass-black-64.png",
+      "128": "images/compass-black-128.png",
+      "256": "images/compass-black-256.png",
+      "512": "images/compass-black-512.png"
+    }
+  },
+  "manifest_version": 2
+}
