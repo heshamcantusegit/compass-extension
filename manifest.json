@@ -14,7 +14,6 @@
     }
   ],
   "browser_action": {
-    "default_popup": "index.html",
     "default_icon": {
       "16": "images/compass-black-16.png",
       "24": "images/compass-black-24.png",
